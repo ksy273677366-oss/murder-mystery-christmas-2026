@@ -62,6 +62,8 @@ body{
   font-weight:400;
   line-height:1.75;
   letter-spacing:-0.01em;
+  word-break:keep-all;
+  overflow-wrap:break-word;
   overflow-x:hidden;
 }
 body::before{
@@ -72,7 +74,16 @@ body::before{
     radial-gradient(circle at 90% 100%, rgba(139,30,36,.22), rgba(8,19,15,0) 55%),
     radial-gradient(circle at 0% 70%, rgba(23,53,42,.55), rgba(8,19,15,0) 45%);
 }
-canvas#snow{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.65}
+.snowbox{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  pointer-events:none;
+  opacity:.75;
+}
+.hero > .snowbox,
+.rsvp > .snowbox,
+.ending > .snowbox{position:absolute;inset:0;z-index:1}
+.rsvp > *:not(.snowbox){position:relative;z-index:2}
 
 .page{
   position:relative;z-index:2;
@@ -413,7 +424,7 @@ strong{font-weight:700;color:var(--ink)}
   text-align:right;
   white-space:nowrap;
 }
-.tl-time em{display:block;font-style:normal;font-size:9.5px;letter-spacing:.02em;color:var(--muted);font-weight:500;line-height:1.4;margin-top:1px}
+.tl-time em{display:block;font-style:normal;font-size:10px;letter-spacing:.02em;color:var(--muted);font-weight:500;line-height:1.4;margin-top:1px}
 .tl-dot{
   flex:0 0 30px;
   position:relative;
@@ -542,6 +553,8 @@ strong{font-weight:700;color:var(--ink)}
 
 /* ---------- rsvp ---------- */
 .rsvp{
+  position:relative;
+  overflow:hidden;
   background:
     radial-gradient(circle at 50% 0%, rgba(139,30,36,.28), rgba(139,30,36,0) 62%),
     linear-gradient(180deg, var(--forest) 0%, var(--forest-deep) 100%);
@@ -720,7 +733,7 @@ strong{font-weight:700;color:var(--ink)}
   .rv{opacity:1;transform:none;transition:none}
   .hero .ha{opacity:1;transform:none;animation:none}
   .scroll-hint::after{animation:none}
-  canvas#snow{display:none}
+  .snowbox{display:none}
 }
 @media (max-width:359px){
   .sec,.hero,.rsvp{padding-left:20px;padding-right:20px}
@@ -730,13 +743,13 @@ strong{font-weight:700;color:var(--ink)}
 </style>
 </head>
 <body>
-<canvas id="snow" aria-hidden="true"></canvas>
 
 <div class="page">
   <article class="card">
 
     <!-- ===== HERO ===== -->
     <header class="hero">
+      <canvas class="snowbox" data-snow aria-hidden="true"></canvas>
       <p class="eyebrow ha">Christmas Night Invitation</p>
       <p class="hero-date ha">2026. 12. 12 SAT &middot; 19:00</p>
       <span class="tree ha" aria-hidden="true">🎄</span>
@@ -950,6 +963,7 @@ strong{font-weight:700;color:var(--ink)}
 
     <!-- ===== RSVP ===== -->
     <section class="rsvp" id="rsvp">
+      <canvas class="snowbox" data-snow aria-hidden="true"></canvas>
       <div class="sec-head rv">
         <p class="eyebrow">R.S.V.P.</p>
         <h2 class="sec-title">💌 참석 여부</h2>
@@ -982,6 +996,7 @@ strong{font-weight:700;color:var(--ink)}
 
     <!-- ===== ENDING ===== -->
     <footer class="ending">
+      <canvas class="snowbox" data-snow aria-hidden="true"></canvas>
       <span class="flake rv" aria-hidden="true">❄</span>
       <p class="rv">눈 속에 갇힌 밤,<span class="last">기다리고 있을게요. ❄️</span></p>
       <p class="sig rv">🎄 머더미스터리 크리스마스 나잇</p>
@@ -1149,81 +1164,95 @@ strong{font-weight:700;color:var(--ink)}
     reveals.forEach(function(el){ el.classList.add('in'); });
   }
 
-  /* ---------- snow ---------- */
-  var canvas = document.getElementById('snow');
+  /* ---------- snow (dark sections only) ---------- */
+  var snowEls = Array.prototype.slice.call(document.querySelectorAll('.snowbox'));
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!reduced && canvas && canvas.getContext){
-    var ctx = canvas.getContext('2d');
-    var w = 0, h = 0, dpr = 1, flakes = [], raf = null;
+  if (!reduced && snowEls.length){
+    var scenes = [];
 
-    function makeFlake(anywhere){
-      var r = 0.6 + Math.random() * 1.9;
+    function makeFlake(sw, sh, seedAll){
+      var r = 0.55 + Math.random() * 1.75;
       return {
-        x: Math.random() * w,
-        y: anywhere ? Math.random() * h : -10 - Math.random() * h * 0.4,
+        x: Math.random() * sw,
+        y: seedAll ? Math.random() * sh : -8 - Math.random() * 40,
         r: r,
-        vy: 0.22 + r * 0.28,
-        drift: (Math.random() - 0.5) * 0.5,
+        vy: 0.15 + r * 0.26,
         phase: Math.random() * Math.PI * 2,
-        amp: 0.25 + Math.random() * 0.65,
-        a: 0.22 + Math.random() * 0.5
+        amp: 0.28 + Math.random() * 0.7,
+        a: 0.24 + Math.random() * 0.55
       };
     }
 
-    function resize(){
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = window.innerWidth;
-      h = window.innerHeight;
-      canvas.width = Math.round(w * dpr);
-      canvas.height = Math.round(h * dpr);
-      canvas.style.width = w + 'px';
-      canvas.style.height = h + 'px';
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var count = Math.max(28, Math.min(110, Math.round(w * h / 14000)));
-      flakes = [];
-      for (var i = 0; i < count; i++) flakes.push(makeFlake(true));
+    function sizeScene(sc){
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var rect = sc.cv.parentElement.getBoundingClientRect();
+      sc.w = Math.max(1, Math.round(rect.width));
+      sc.h = Math.max(1, Math.round(rect.height));
+      sc.cv.width = Math.round(sc.w * dpr);
+      sc.cv.height = Math.round(sc.h * dpr);
+      sc.cv.style.width = sc.w + 'px';
+      sc.cv.style.height = sc.h + 'px';
+      sc.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var count = Math.max(14, Math.min(80, Math.round(sc.w * sc.h / 9000)));
+      sc.flakes = [];
+      for (var i = 0; i < count; i++) sc.flakes.push(makeFlake(sc.w, sc.h, true));
+      sc.ready = true;
     }
 
-    function draw(){
-      ctx.clearRect(0, 0, w, h);
-      for (var i = 0; i < flakes.length; i++){
-        var f = flakes[i];
-        ctx.beginPath();
-        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255,255,255,' + f.a + ')';
-        ctx.fill();
+    function drawScene(sc){
+      sc.ctx.clearRect(0, 0, sc.w, sc.h);
+      for (var i = 0; i < sc.flakes.length; i++){
+        var f = sc.flakes[i];
+        sc.ctx.beginPath();
+        sc.ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+        sc.ctx.fillStyle = 'rgba(255,255,255,' + f.a + ')';
+        sc.ctx.fill();
       }
     }
 
-    function loop(){
-      for (var i = 0; i < flakes.length; i++){
-        var f = flakes[i];
-        f.phase += 0.012;
-        f.y += f.vy;
-        f.x += Math.sin(f.phase) * f.amp * 0.5 + f.drift * 0.18;
-        if (f.y - f.r > h + 4 || f.x < -12 || f.x > w + 12){
-          flakes[i] = makeFlake(false);
-          flakes[i].x = Math.random() * w;
+    var snowRaf = null;
+    function snowFrame(){
+      for (var si = 0; si < scenes.length; si++){
+        var sc = scenes[si];
+        if (!sc.ready) continue;
+        for (var i = 0; i < sc.flakes.length; i++){
+          var f = sc.flakes[i];
+          f.phase += 0.011;
+          f.y += f.vy;
+          f.x += Math.sin(f.phase) * f.amp * 0.45;
+          if (f.y - f.r > sc.h + 4 || f.x < -10 || f.x > sc.w + 10){
+            sc.flakes[i] = makeFlake(sc.w, sc.h, false);
+          }
         }
+        drawScene(sc);
       }
-      draw();
-      raf = requestAnimationFrame(loop);
+      snowRaf = requestAnimationFrame(snowFrame);
     }
 
-    resize();
-    draw();
-    loop();
+    function sizeAllScenes(){
+      scenes.forEach(sizeScene);
+      scenes.forEach(drawScene);
+    }
 
-    var rt = null;
+    snowEls.forEach(function(cv){
+      var ctx = cv.getContext && cv.getContext('2d');
+      if (ctx) scenes.push({ cv: cv, ctx: ctx, w: 0, h: 0, flakes: [], ready: false });
+    });
+
+    sizeAllScenes();
+    snowFrame();
+
+    var snowRt = null;
     window.addEventListener('resize', function(){
-      clearTimeout(rt);
-      rt = setTimeout(function(){ cancelAnimationFrame(raf); resize(); draw(); loop(); }, 180);
+      clearTimeout(snowRt);
+      snowRt = setTimeout(sizeAllScenes, 200);
     });
     document.addEventListener('visibilitychange', function(){
-      if (document.hidden){ cancelAnimationFrame(raf); }
-      else { cancelAnimationFrame(raf); loop(); }
+      if (document.hidden){ cancelAnimationFrame(snowRaf); }
+      else { cancelAnimationFrame(snowRaf); snowFrame(); }
     });
   }
+
 })();
 </script>
 </body>
