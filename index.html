@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0F231C">
+<title>🎄 머더미스터리 크리스마스 나잇</title>
+<meta name="description" content="12월 12일(토) 저녁 7시 ~ 13일(일) 아침 6시 · 홍대 파티룸 ‘한 겨울, 사건의 집’. 한겨울 밤, 여러분이 탐정이 될 수 있는 기회!">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="머더미스터리 크리스마스 나잇">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="🎄 머더미스터리 크리스마스 나잇">
+<meta property="og:description" content="12월 12일(토) 저녁 7시 ~ 13일(일) 아침 6시 · 홍대 파티룸 ‘한 겨울, 사건의 집’
+한겨울 밤, 여러분이 탐정이 될 수 있는 기회! 🕵️">
+<meta property="og:url" content="https://ksy273677366-oss.github.io/murder-mystery-christmas-2026/">
+<meta property="og:image" content="https://ksy273677366-oss.github.io/murder-mystery-christmas-2026/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="머더미스터리 크리스마스 나잇 초대장">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🎄 머더미스터리 크리스마스 나잇">
+<meta name="twitter:description" content="12월 12일(토) 저녁 7시 ~ 13일(일) 아침 6시 · 홍대 파티룸 ‘한 겨울, 사건의 집’">
+<meta name="twitter:image" content="https://ksy273677366-oss.github.io/murder-mystery-christmas-2026/og-image.png">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --forest:#0F231C;
+  --forest-deep:#08130F;
+  --forest-soft:#17352A;
+  --burgundy:#8B1E24;
+  --wine:#6B1519;
+  --gold:#D4AF37;
+  --gold-soft:#E7CE86;
+  --gold-dim:rgba(212,175,55,.45);
+  --ivory:#FBF7EF;
+  --ivory-2:#F5EFE2;
+  --ivory-3:#EFE6D3;
+  --ink:#2A251E;
+  --ink-soft:#4A4238;
+  --muted:#7A6E5F;
+  --line:rgba(42,37,30,.12);
+  --line-gold:rgba(212,175,55,.32);
+  --serif:'Gowun Batang','Noto Serif KR',serif;
+  --latin:'Cormorant Garamond','Gowun Batang',serif;
+  --sans:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--forest-deep);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-weight:400;
+  line-height:1.75;
+  letter-spacing:-0.01em;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(23,53,42,.95), rgba(8,19,15,0) 55%),
+    radial-gradient(circle at 90% 100%, rgba(139,30,36,.22), rgba(8,19,15,0) 55%),
+    radial-gradient(circle at 0% 70%, rgba(23,53,42,.55), rgba(8,19,15,0) 45%);
+}
+canvas#snow{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.65}
+
+.page{
+  position:relative;z-index:2;
+  padding:0 0 0;
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;
+}
+.card{
+  position:relative;
+  width:100%;max-width:460px;
+  background:var(--ivory);
+  box-shadow:0 30px 90px rgba(0,0,0,.55), 0 2px 0 rgba(255,255,255,.03);
+  overflow:hidden;
+}
+@media(min-width:520px){
+  .page{padding:34px 18px 60px}
+  .card{border-radius:4px}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  padding:64px 26px 58px;
+  text-align:center;
+  color:var(--ivory);
+  background:
+    radial-gradient(circle at 50% 12%, rgba(212,175,55,.13), rgba(212,175,55,0) 46%),
+    radial-gradient(circle at 50% 88%, rgba(139,30,36,.30), rgba(139,30,36,0) 62%),
+    linear-gradient(180deg, var(--forest-soft) 0%, var(--forest) 42%, var(--forest-deep) 100%);
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;inset:13px;
+  border:1px solid rgba(212,175,55,.34);
+  pointer-events:none;
+}
+.hero::after{
+  content:"";
+  position:absolute;inset:19px;
+  border:1px solid rgba(212,175,55,.12);
+  pointer-events:none;
+}
+.hero > *{position:relative;z-index:2}
+
+.eyebrow{
+  margin:0;
+  font-family:var(--latin);
+  font-size:11px;
+  letter-spacing:.42em;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+  font-weight:500;
+}
+.eyebrow--dark{color:var(--burgundy)}
+.hero-date{
+  margin:14px 0 0;
+  font-family:var(--latin);
+  font-size:14px;
+  letter-spacing:.24em;
+  color:rgba(251,247,239,.62);
+}
+.tree{
+  display:block;
+  margin:26px 0 4px;
+  font-size:40px;
+  line-height:1;
+  filter:drop-shadow(0 4px 14px rgba(212,175,55,.28));
+}
+.hero h1{
+  margin:12px 0 0;
+  font-family:var(--serif);
+  font-weight:700;
+  font-size:clamp(27px,7.6vw,33px);
+  line-height:1.42;
+  letter-spacing:-0.02em;
+  color:var(--ivory);
+  text-shadow:0 2px 22px rgba(0,0,0,.35);
+}
+.hero h1 .l2{
+  display:block;
+  color:var(--gold-soft);
+  font-size:.94em;
+  letter-spacing:.01em;
+}
+.divider{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  margin:24px auto 22px;
+  max-width:200px;
+}
+.divider span{
+  height:1px;flex:1;
+  background:linear-gradient(90deg, rgba(212,175,55,0), var(--gold-dim));
+}
+.divider span:last-child{background:linear-gradient(90deg, var(--gold-dim), rgba(212,175,55,0))}
+.divider i{
+  width:6px;height:6px;transform:rotate(45deg);
+  border:1px solid var(--gold-soft);
+  display:block;
+}
+.intro{
+  margin:0 0 12px;
+  font-size:14.5px;
+  line-height:1.95;
+  color:rgba(251,247,239,.94);
+  font-weight:400;
+  letter-spacing:-0.005em;
+}
+.intro--sub{
+  font-size:13.5px;
+  line-height:2;
+  color:rgba(251,247,239,.72);
+  font-weight:300;
+}
+.scroll-hint{
+  margin-top:38px;
+  display:inline-flex;flex-direction:column;align-items:center;gap:8px;
+  font-family:var(--latin);
+  font-size:9.5px;letter-spacing:.34em;
+  color:rgba(212,175,55,.62);
+}
+.scroll-hint::after{
+  content:"";
+  width:1px;height:26px;
+  background:linear-gradient(180deg, rgba(212,175,55,.7), rgba(212,175,55,0));
+  animation:hint 2.6s ease-in-out infinite;
+}
+@keyframes hint{0%,100%{opacity:.25;transform:scaleY(.55)}50%{opacity:1;transform:scaleY(1)}}
+
+/* ---------- countdown ---------- */
+.countdown{
+  background:var(--forest-deep);
+  color:var(--ivory);
+  text-align:center;
+  padding:22px 20px 26px;
+  border-top:1px solid rgba(212,175,55,.20);
+  border-bottom:1px solid rgba(212,175,55,.20);
+}
+.cd-badge{
+  display:inline-block;
+  font-family:var(--latin);
+  font-size:11px;letter-spacing:.3em;
+  color:var(--forest-deep);
+  background:var(--gold-soft);
+  padding:5px 13px 4px;
+  margin-bottom:16px;
+}
+.cd-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:6px;
+  max-width:340px;margin:0 auto;
+}
+.cd-cell{padding:2px 0}
+.cd-num{
+  display:block;
+  font-family:var(--latin);
+  font-size:27px;
+  font-weight:500;
+  line-height:1.1;
+  color:var(--ivory);
+  font-variant-numeric:tabular-nums;
+  letter-spacing:.02em;
+}
+.cd-num small{font-size:.55em;color:var(--gold-soft);margin-left:1px}
+.cd-label{
+  display:block;margin-top:5px;
+  font-size:9.5px;letter-spacing:.26em;
+  color:rgba(251,247,239,.48);
+}
+.cd-done{
+  margin:0;font-family:var(--serif);font-size:14px;color:var(--gold-soft);line-height:1.9;
+}
+
+/* ---------- section shell ---------- */
+.sec{padding:44px 26px 46px;position:relative}
+.sec--tint{background:var(--ivory-2)}
+.sec-head{text-align:center;margin-bottom:26px}
+.sec-title{
+  margin:9px 0 0;
+  font-family:var(--serif);
+  font-weight:700;
+  font-size:20px;
+  letter-spacing:-0.015em;
+  color:var(--forest);
+  line-height:1.6;
+}
+.sec-title--ink{color:var(--ink)}
+.rule{
+  width:26px;height:1px;background:var(--gold);
+  margin:16px auto 0;
+}
+.lead{
+  margin:0 0 18px;
+  font-size:13.5px;
+  line-height:1.95;
+  color:var(--ink-soft);
+  font-weight:300;
+}
+strong{font-weight:700;color:var(--ink)}
+
+/* ---------- details ---------- */
+.details{
+  border-top:1px solid var(--line-gold);
+  border-bottom:1px solid var(--line-gold);
+  padding:6px 0;
+}
+.row{
+  display:flex;gap:16px;
+  padding:14px 2px;
+  align-items:flex-start;
+}
+.row + .row{border-top:1px dashed rgba(42,37,30,.10)}
+.row-k{
+  flex:0 0 46px;
+  font-size:12px;
+  font-weight:500;
+  color:var(--burgundy);
+  letter-spacing:.04em;
+  padding-top:2px;
+}
+.row-v{
+  flex:1;min-width:0;
+  font-size:14px;
+  line-height:1.72;
+  color:var(--ink);
+}
+.row-v .sub{
+  display:block;
+  margin-top:3px;
+  font-size:12.5px;
+  color:var(--muted);
+  font-weight:300;
+}
+.addr-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.copy-mini{
+  appearance:none;border:1px solid rgba(42,37,30,.16);
+  background:#fff;
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:11px;letter-spacing:.02em;
+  padding:4px 9px;
+  border-radius:999px;
+  cursor:pointer;
+  transition:.2s;
+  white-space:nowrap;
+}
+.copy-mini:hover{border-color:var(--gold);color:var(--ink)}
+.copy-mini:active{transform:scale(.96)}
+
+.map-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin:20px 0 0;
+  padding:14px 18px;
+  background:var(--forest);
+  color:var(--ivory);
+  text-decoration:none;
+  font-size:13.5px;font-weight:500;letter-spacing:.04em;
+  border:1px solid var(--forest);
+  box-shadow:0 8px 20px rgba(15,35,28,.18);
+  transition:.2s;
+}
+.map-btn:active{transform:translateY(1px);background:var(--forest-soft)}
+.map-btn svg{width:14px;height:14px;flex:0 0 auto}
+.map-btn .arrow{margin-left:2px;font-size:12px;opacity:.6}
+
+/* ---------- dress code ---------- */
+.dress-wrap{
+  display:flex;align-items:stretch;justify-content:center;gap:12px;
+  margin:4px 0 24px;
+}
+.swatch{
+  flex:1;max-width:150px;
+  text-align:center;
+  padding:18px 8px 14px;
+  color:#fff;
+  position:relative;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.16), 0 10px 22px rgba(0,0,0,.14);
+}
+.swatch--red{background:linear-gradient(160deg,#A02A30,var(--burgundy) 55%,var(--wine))}
+.swatch--green{background:linear-gradient(160deg,#1D4234,var(--forest) 55%,#0A1A14)}
+.swatch b{
+  display:block;
+  font-family:var(--latin);
+  font-size:17px;letter-spacing:.28em;font-weight:600;
+}
+.swatch span{
+  display:block;margin-top:2px;
+  font-size:10.5px;letter-spacing:.24em;
+  color:rgba(255,255,255,.66);
+}
+.swatch::after{
+  content:"";position:absolute;inset:5px;
+  border:1px solid rgba(212,175,55,.36);
+  pointer-events:none;
+}
+.dress-copy{text-align:center}
+.dress-copy p{margin:0}
+.dress-copy .big{
+  font-family:serif;
+  font-size:15px;font-weight:500;
+  color:var(--ink);
+  line-height:1.9;
+}
+.dress-copy .small{
+  margin-top:8px;
+  font-size:13px;font-weight:300;
+  color:var(--ink-soft);
+  line-height:1.95;
+}
+
+/* ---------- timeline ---------- */
+.timeline{
+  list-style:none;margin:0;padding:0;
+  position:relative;
+}
+.timeline::before{
+  content:"";
+  position:absolute;left:67px;top:8px;bottom:8px;
+  width:1px;
+  background:linear-gradient(180deg, rgba(212,175,55,0), var(--gold-dim) 8%, var(--gold-dim) 92%, rgba(212,175,55,0));
+}
+.tl{
+  position:relative;
+  display:flex;gap:0;
+  padding:0 0 22px 0;
+}
+.tl:last-child{padding-bottom:0}
+.tl-time{
+  flex:0 0 52px;
+  padding-right:0;
+  font-family:var(--latin);
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:.02em;
+  color:var(--burgundy);
+  line-height:1.5;
+  padding-top:2px;
+  text-align:right;
+  white-space:nowrap;
+}
+.tl-time em{display:block;font-style:normal;font-size:9.5px;letter-spacing:.02em;color:var(--muted);font-weight:500;line-height:1.4;margin-top:1px}
+.tl-dot{
+  flex:0 0 30px;
+  position:relative;
+}
+.tl-dot::before{
+  content:"";
+  position:absolute;left:50%;top:7px;
+  width:7px;height:7px;
+  margin-left:-3.5px;
+  transform:rotate(45deg);
+  background:var(--ivory);
+  border:1px solid var(--gold);
+}
+.tl--main .tl-dot::before{background:var(--gold);box-shadow:0 0 0 4px rgba(212,175,55,.14)}
+.tl-body{flex:1;min-width:0;padding-top:0}
+.tl-title{
+  margin:0 0 5px;
+  font-family:var(--latin);
+  font-size:12px;
+  letter-spacing:.22em;
+  font-weight:600;
+  color:var(--forest);
+  text-transform:uppercase;
+}
+.tl-body p{
+  margin:0;
+  font-size:13.2px;
+  line-height:1.85;
+  color:var(--ink-soft);
+  font-weight:300;
+}
+.tl-body p .case{
+  color:var(--burgundy);
+  font-weight:500;
+}
+.tl-sub{
+  margin:9px 0 0;padding:0;list-style:none;
+}
+.tl-sub li{
+  position:relative;
+  padding-left:11px;
+  font-size:12.4px;
+  line-height:1.85;
+  color:var(--muted);
+}
+.tl-sub li::before{
+  content:"·";
+  position:absolute;left:0;top:0;
+  color:var(--gold);
+  font-weight:700;
+}
+.tl--note .tl-time{color:var(--muted)}
+.tl--note .tl-dot::before{
+  background:transparent;border-style:dashed;border-color:var(--gold-dim);
+}
+.tl--note .tl-body p{color:var(--muted);font-size:12.6px}
+.tl-note{
+  margin:22px 0 0;
+  padding:13px 15px;
+  background:rgba(212,175,55,.10);
+  border-left:2px solid var(--gold);
+  font-size:12.3px;
+  line-height:1.85;
+  color:var(--ink-soft);
+  font-weight:300;
+}
+
+/* ---------- gift ---------- */
+.gift-lead{font-size:13.6px;line-height:2;color:var(--ink-soft);font-weight:300;margin:0 0 16px}
+.bullets{list-style:none;margin:0;padding:0}
+.bullets li{
+  position:relative;
+  padding:0 0 0 22px;
+  margin-bottom:8px;
+  font-size:13.2px;
+  line-height:1.9;
+  color:var(--ink);
+}
+.bullets li::before{
+  content:"";
+  position:absolute;left:4px;top:11px;
+  width:5px;height:5px;
+  transform:rotate(45deg);
+  background:var(--burgundy);
+}
+.gift-quote{
+  margin:20px 0 0;
+  padding:20px 18px;
+  background:#fff;
+  border:1px solid rgba(212,175,55,.34);
+  text-align:center;
+  font-family:var(--serif);
+  font-size:13.4px;
+  line-height:2.05;
+  color:var(--ink-soft);
+}
+.gift-quote strong{color:var(--burgundy)}
+
+/* ---------- checklist ---------- */
+.check{list-style:none;margin:0;padding:0}
+.check li{
+  display:flex;gap:13px;
+  padding:15px 0;
+  border-top:1px solid var(--line);
+}
+.check li:first-child{border-top:0;padding-top:2px}
+.check li:last-child{padding-bottom:0}
+.check .ico{
+  flex:0 0 30px;height:30px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;
+  background:#fff;
+  border:1px solid rgba(212,175,55,.34);
+  border-radius:50%;
+  line-height:1;
+}
+.check p{
+  margin:0;
+  font-size:13px;
+  line-height:1.9;
+  color:var(--ink-soft);
+  font-weight:300;
+  padding-top:1px;
+}
+.check p b{color:var(--ink);font-weight:700}
+
+/* ---------- rsvp ---------- */
+.rsvp{
+  background:
+    radial-gradient(circle at 50% 0%, rgba(139,30,36,.28), rgba(139,30,36,0) 62%),
+    linear-gradient(180deg, var(--forest) 0%, var(--forest-deep) 100%);
+  color:var(--ivory);
+  padding:52px 26px 54px;
+}
+.rsvp .sec-title{color:var(--ivory)}
+.rsvp .lead{color:rgba(251,247,239,.72)}
+.rsvp .lead strong{color:var(--gold-soft)}
+.deadline{
+  display:inline-block;
+  margin:0 auto 22px;
+  padding:7px 16px;
+  border:1px solid rgba(212,175,55,.42);
+  font-size:11.5px;letter-spacing:.14em;
+  color:var(--gold-soft);
+}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 6px}
+.chip{
+  appearance:none;cursor:pointer;
+  font-family:var(--sans);font-size:12.6px;font-weight:400;
+  color:rgba(251,247,239,.80);
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(251,247,239,.22);
+  border-radius:999px;
+  padding:9px 15px;
+  transition:.22s;
+  letter-spacing:-0.01em;
+}
+.chip:active{transform:scale(.97)}
+.chip[aria-pressed="true"]{
+  background:var(--gold-soft);
+  border-color:var(--gold-soft);
+  color:var(--forest-deep);
+  font-weight:500;
+}
+.field{margin:24px 0 0}
+.field label{
+  display:block;
+  font-size:10.5px;letter-spacing:.28em;
+  color:rgba(212,175,55,.72);
+  margin-bottom:8px;
+}
+.field input{
+  width:100%;
+  appearance:none;
+  background:rgba(255,255,255,.05);
+  border:0;border-bottom:1px solid rgba(251,247,239,.30);
+  color:var(--ivory);
+  font-family:var(--sans);font-size:15px;
+  padding:11px 2px;
+  outline:none;
+  transition:border-color .2s, background .2s;
+  border-radius:2px 2px 0 0;
+}
+.field input::placeholder{color:rgba(251,247,239,.30)}
+.field input:focus{border-bottom-color:var(--gold-soft);background:rgba(255,255,255,.08)}
+.preview{
+  margin:20px 0 0;
+  padding:15px 16px;
+  background:rgba(0,0,0,.26);
+  border:1px dashed rgba(212,175,55,.34);
+  text-align:center;
+  font-family:var(--serif);
+  font-size:14.5px;
+  color:var(--gold-soft);
+  line-height:1.7;
+  min-height:52px;
+  display:flex;align-items:center;justify-content:center;
+  word-break:keep-all;
+}
+.preview.is-empty{color:rgba(251,247,239,.34);font-family:var(--sans);font-size:12.5px;letter-spacing:.02em}
+.copy-btn{
+  width:100%;
+  margin:14px 0 0;
+  appearance:none;cursor:pointer;
+  padding:16px 18px;
+  background:var(--gold-soft);
+  color:var(--forest-deep);
+  border:0;
+  font-family:var(--sans);
+  font-size:14px;font-weight:700;letter-spacing:.02em;
+  box-shadow:0 10px 24px rgba(0,0,0,.30);
+  transition:.2s;
+}
+.copy-btn:active{transform:translateY(1px);box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.copy-btn svg{width:14px;height:14px;vertical-align:-2px;margin-right:6px}
+.rsvp .hint{
+  margin:16px 0 0;
+  font-size:12px;line-height:1.9;
+  color:rgba(251,247,239,.50);
+  text-align:center;
+  font-weight:300;
+}
+.rsvp .hint b{color:rgba(251,247,239,.80);font-weight:500;letter-spacing:.02em}
+
+/* ---------- ending ---------- */
+.ending{
+  position:relative;
+  background:linear-gradient(180deg, var(--forest-deep) 0%, #0B1A15 60%, var(--forest) 100%);
+  color:var(--ivory);
+  text-align:center;
+  padding:62px 30px 40px;
+  overflow:hidden;
+}
+.ending::before{
+  content:"";
+  position:absolute;inset:13px;
+  border:1px solid rgba(212,175,55,.22);
+  pointer-events:none;
+}
+.ending > *{position:relative;z-index:2}
+.ending .flake{color:var(--gold-soft);font-size:17px;display:block;margin-bottom:18px}
+.ending p{
+  margin:0;
+  font-family:var(--serif);
+  font-size:16px;
+  line-height:2.15;
+  letter-spacing:-0.005em;
+  color:rgba(251,247,239,.92);
+}
+.ending p .last{display:block;color:var(--gold-soft);margin-top:2px}
+.ending .sig{
+  margin-top:34px;
+  font-family:var(--latin);
+  font-size:10px;letter-spacing:.34em;
+  color:rgba(212,175,55,.62);
+}
+.share-mini{
+  margin-top:22px;
+  appearance:none;cursor:pointer;
+  background:transparent;
+  border:1px solid rgba(251,247,239,.20);
+  color:rgba(251,247,239,.62);
+  font-family:var(--sans);font-size:11.5px;
+  padding:8px 14px;border-radius:999px;
+  transition:.2s;
+}
+.share-mini:active{transform:scale(.97)}
+.share-mini:hover{border-color:rgba(212,175,55,.5);color:var(--gold-soft)}
+
+/* ---------- toast ---------- */
+#toast{
+  position:fixed;left:50%;bottom:34px;
+  transform:translate(-50%,16px);
+  z-index:60;
+  max-width:calc(100vw - 48px);
+  padding:13px 20px;
+  background:rgba(15,35,28,.96);
+  color:var(--ivory);
+  border:1px solid rgba(212,175,55,.42);
+  font-size:12.8px;line-height:1.5;
+  text-align:center;
+  border-radius:3px;
+  box-shadow:0 12px 34px rgba(0,0,0,.45);
+  opacity:0;pointer-events:none;
+  transition:opacity .28s ease, transform .28s ease;
+  word-break:keep-all;
+}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .85s cubic-bezier(.22,.61,.36,1),transform .85s cubic-bezier(.22,.61,.36,1)}
+.rv.in{opacity:1;transform:none}
+.hero .ha{opacity:0;transform:translateY(14px);animation:heroIn 1s cubic-bezier(.22,.61,.36,1) forwards}
+.hero .ha:nth-child(2){animation-delay:.12s}
+.hero .ha:nth-child(3){animation-delay:.24s}
+.hero .ha:nth-child(4){animation-delay:.38s}
+.hero .ha:nth-child(5){animation-delay:.5s}
+.hero .ha:nth-child(6){animation-delay:.62s}
+.hero .ha:nth-child(7){animation-delay:.74s}
+.hero .ha:nth-child(8){animation-delay:.86s}
+@keyframes heroIn{to{opacity:1;transform:none}}
+
+@media (prefers-reduced-motion: reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hero .ha{opacity:1;transform:none;animation:none}
+  .scroll-hint::after{animation:none}
+  canvas#snow{display:none}
+}
+@media (max-width:359px){
+  .sec,.hero,.rsvp{padding-left:20px;padding-right:20px}
+  .tl-time{flex-basis:46px;font-size:10px}
+  .timeline::before{left:61px}
+}
+</style>
+</head>
+<body>
+<canvas id="snow" aria-hidden="true"></canvas>
+
+<div class="page">
+  <article class="card">
+
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+      <p class="eyebrow ha">Christmas Night Invitation</p>
+      <p class="hero-date ha">2026. 12. 12 SAT &middot; 19:00</p>
+      <span class="tree ha" aria-hidden="true">🎄</span>
+      <h1 class="ha">머더미스터리 <span class="l2">크리스마스 나잇</span></h1>
+      <div class="divider ha" aria-hidden="true"><span></span><i></i><span></span></div>
+      <p class="intro ha">한겨울 밤, 여러분이 탐정이 될 수 있는 기회! 🕵️</p>
+      <p class="intro intro--sub ha">크리스마스 직전,<br>밤새 추리하고 먹고 놀고 서로를 의심하는 파티에 초대합니다!</p>
+      <span class="scroll-hint ha" aria-hidden="true">SCROLL</span>
+    </header>
+
+    <!-- ===== COUNTDOWN ===== -->
+    <section class="countdown" aria-label="파티까지 남은 시간">
+      <div id="cdBadge" class="cd-badge">D-DAY</div>
+      <div class="cd-grid" id="cdGrid">
+        <div class="cd-cell"><span class="cd-num" id="cdD">--</span><span class="cd-label">DAYS</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cdH">--</span><span class="cd-label">HOURS</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cdM">--</span><span class="cd-label">MINUTES</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cdS">--</span><span class="cd-label">SECONDS</span></div>
+      </div>
+      <p class="cd-done" id="cdDone" hidden>눈 내리는 밤이 시작됐어요. ❄️</p>
+    </section>
+
+    <!-- ===== DETAILS ===== -->
+    <section class="sec">
+      <div class="sec-head rv">
+        <p class="eyebrow">Save the Date</p>
+        <h2 class="sec-title">📍 일시와 장소</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="details rv">
+        <div class="row">
+          <div class="row-k">일시</div>
+          <div class="row-v">12월 12일(토) 저녁 7시 ~ 13일(일) 아침 6시</div>
+        </div>
+        <div class="row">
+          <div class="row-k">장소</div>
+          <div class="row-v">홍대 파티룸 ‘한 겨울, 사건의 집’</div>
+        </div>
+        <div class="row">
+          <div class="row-k">주소</div>
+          <div class="row-v">
+            <div class="addr-line">
+              <span id="addrText">서울 마포구 잔다리로 65, 지하 1층</span>
+              <button type="button" class="copy-mini" id="copyAddr" aria-label="주소 복사">복사</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row-k">주차</div>
+          <div class="row-v">주차가 불가하니 대중교통을 이용해 주세요.</div>
+        </div>
+      </div>
+
+      <a class="map-btn rv" href="https://naver.me/GreHBT20" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        지도 열기 <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <!-- ===== DRESS CODE ===== -->
+    <section class="sec sec--tint">
+      <div class="sec-head rv">
+        <p class="eyebrow">Dress Code</p>
+        <h2 class="sec-title">🎅 드레스코드</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="dress-wrap rv">
+        <div class="swatch swatch--red"><b>RED</b><span>CRIMSON</span></div>
+        <div class="swatch swatch--green"><b>GREEN</b><span>FOREST</span></div>
+      </div>
+
+      <div class="dress-copy rv">
+        <p class="big">빨강 또는 초록!</p>
+        <p class="small">포인트 한 가지만 있어도 OK!<br>크리스마스 분위기를 더해 주세요.</p>
+      </div>
+    </section>
+
+    <!-- ===== TIMETABLE ===== -->
+    <section class="sec">
+      <div class="sec-head rv">
+        <p class="eyebrow">Timetable</p>
+        <h2 class="sec-title">⏰ 타임테이블</h2>
+        <div class="rule"></div>
+      </div>
+
+      <ol class="timeline">
+        <li class="tl tl--note rv">
+          <div class="tl-time">17:00경</div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-body">
+            <p>당일 저녁 메뉴 투표를 보낼게요! 꼭 참여해 주세요 :)</p>
+          </div>
+        </li>
+
+        <li class="tl tl--main rv">
+          <div class="tl-time">19:00</div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-body">
+            <h3 class="tl-title">WELCOME</h3>
+            <p>정시 입실 시작! 서로 인사하고 자리를 잡아요.<br>준비해 온 선물도 이때 제출해 주세요.</p>
+          </div>
+        </li>
+
+        <li class="tl rv">
+          <div class="tl-time">19:15<em>–20:15</em></div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-body">
+            <h3 class="tl-title">CHRISTMAS DINNER</h3>
+            <p>함께 저녁을 먹으며 크리스마스 분위기를 즐겨요.</p>
+            <ul class="tl-sub">
+              <li>19:15–19:45 저녁 식사</li>
+              <li>19:45–20:15 미스터리 선물 교환 🎁</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl tl--main rv">
+          <div class="tl-time">20:15<em>–23:30</em></div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-body">
+            <h3 class="tl-title">MURDER MYSTERY 1</h3>
+            <p>첫 번째 사건, <span class="case">&lt;껍질 속 세상&gt;</span><br>총 3시간 15분 동안 진행되는 메인 게임입니다.</p>
+          </div>
+        </li>
+
+        <li class="tl rv">
+          <div class="tl-time">23:30<em>–01:00</em></div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-body">
+            <h3 class="tl-title">MIDNIGHT BREAK</h3>
+            <p>야식 타임! 메뉴는 현장 투표로 결정해요.<br>잠시 쉬면서 다음 게임을 준비합니다.</p>
+          </div>
+        </li>
+
+        <li class="tl rv">
+          <div class="tl-time">01:00</div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-body">
+            <h3 class="tl-title">MURDER MYSTERY 2</h3>
+            <p>두 번째 사건 (?)</p>
+          </div>
+        </li>
+
+        <li class="tl rv">
+          <div class="tl-time">03:30</div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-body">
+            <h3 class="tl-title">MURDER MYSTERY 3</h3>
+            <p>마지막 사건 (?)</p>
+          </div>
+        </li>
+
+        <li class="tl rv">
+          <div class="tl-time">06:00</div>
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-body">
+            <h3 class="tl-title">LAST NIGHT</h3>
+            <p>정리 후 퇴실 및 해산!</p>
+          </div>
+        </li>
+      </ol>
+
+      <p class="tl-note rv">※ 2차, 3차 게임은 확정 인원에 따라 후보를 정해두고 현장에서 투표로 결정할 예정이에요.</p>
+    </section>
+
+    <!-- ===== GIFT ===== -->
+    <section class="sec sec--tint">
+      <div class="sec-head rv">
+        <p class="eyebrow">Mystery Gift Exchange</p>
+        <h2 class="sec-title">🎁 미스터리 선물 교환</h2>
+        <div class="rule"></div>
+      </div>
+
+      <p class="gift-lead rv">이번 크리스마스에는 작은 선물 교환도 준비했어요!</p>
+      <p class="gift-lead rv">집에 있지만 이제는 잘 쓰지 않는 물건 중,<br>누군가에게는 다시 소중하게 쓰일 수 있을 만한 물건 하나를 가져와 주세요.</p>
+
+      <ul class="bullets rv">
+        <li>새로 구매할 필요 없이 집에 있는 물건이면 충분해요.</li>
+        <li>책, 문구류, 소품, 굿즈 등 종류는 자유!</li>
+        <li>깨끗하고 정상적으로 사용할 수 있는 물건으로 준비해 주세요.</li>
+        <li>누가 가져왔는지 알 수 없도록 포장해 주세요.</li>
+      </ul>
+
+      <div class="gift-quote rv">
+        선물에 얽힌 짧은 사연이나 힌트를 듣고,<br>누가 가져온 물건인지 맞혀보는 시간도 가질 예정이에요.<br><br>
+        <strong>정답을 맞힌 사람에게 선물을 가져갈 기회가 주어집니다!</strong>
+      </div>
+    </section>
+
+    <!-- ===== CHECKLIST ===== -->
+    <section class="sec">
+      <div class="sec-head rv">
+        <p class="eyebrow">Please Note</p>
+        <h2 class="sec-title">🚨 꼭 확인해 주세요</h2>
+        <div class="rule"></div>
+      </div>
+
+      <ul class="check">
+        <li class="rv"><span class="ico" aria-hidden="true">⏰</span><p><b>지각은 절대 금지예요!</b> 1차 게임은 모두가 처음부터 끝까지 함께해야 하는 게임이라 늦으면 진행이 어려워요. 게임 도중 이탈도 불가합니다.</p></li>
+        <li class="rv"><span class="ico" aria-hidden="true">🚪</span><p>입실은 <b>19:00 정시부터</b> 가능해요. 너무 일찍 오셔도 입장할 수 없습니다. 입구 비밀번호는 당일 별도로 안내할게요.</p></li>
+        <li class="rv"><span class="ico" aria-hidden="true">🩴</span><p>입구에서 실내 전용 슬리퍼로 갈아신고 입장해 주세요.</p></li>
+        <li class="rv"><span class="ico" aria-hidden="true">🤫</span><p>스포일러 방지를 위해 게임 내용은 미리 검색하지 말아 주세요!</p></li>
+        <li class="rv"><span class="ico" aria-hidden="true">💰</span><p>비용은 파티가 끝난 뒤 제가 한 번에 정산 안내해 드릴게요.</p></li>
+        <li class="rv"><span class="ico" aria-hidden="true">☕</span><p>밤샘 참가자를 위한 커피와 간식은 제가 준비할게요!</p></li>
+        <li class="rv"><span class="ico" aria-hidden="true">👕</span><p>밤샘용으로 갈아입을 옷, 편한 양말, 세안 용품을 챙겨 오셔도 좋아요.</p></li>
+        <li class="rv"><span class="ico" aria-hidden="true">🚕</span><p>1차 게임 종료 후에는 중간 귀가도 가능합니다. 귀가 예정인 분들은 교통편을 미리 확인해 주세요.</p></li>
+      </ul>
+    </section>
+
+    <!-- ===== RSVP ===== -->
+    <section class="rsvp" id="rsvp">
+      <div class="sec-head rv">
+        <p class="eyebrow">R.S.V.P.</p>
+        <h2 class="sec-title">💌 참석 여부</h2>
+        <div class="rule"></div>
+      </div>
+
+      <p class="lead rv" style="text-align:center">언제까지 참석 가능한지는 <strong>12월 4일까지</strong> 회신 부탁드려요.</p>
+      <div style="text-align:center" class="rv"><span class="deadline">REPLY BY 12. 04</span></div>
+
+      <div class="chips rv" role="group" aria-label="참석 범위 선택">
+        <button type="button" class="chip" data-scope="1차 게임만 참석" aria-pressed="false">1차 게임만 참석</button>
+        <button type="button" class="chip" data-scope="2차까지 참석" aria-pressed="false">2차까지 참석</button>
+        <button type="button" class="chip" data-scope="마지막까지 참석" aria-pressed="false">마지막까지 참석</button>
+      </div>
+
+      <div class="field rv">
+        <label for="nameInput">이름</label>
+        <input id="nameInput" type="text" placeholder="이름을 적어 주세요" autocomplete="name" enterkeyhint="done" maxlength="20">
+      </div>
+
+      <div class="preview is-empty rv" id="preview" aria-live="polite">이름 / 참석 범위</div>
+
+      <button type="button" class="copy-btn rv" id="copyRsvp">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        회신 문구 복사하기
+      </button>
+
+      <p class="hint rv">아래 내용을 작성해서 카톡으로 보내 주세요!<br><b>이름 / 참석 범위</b></p>
+    </section>
+
+    <!-- ===== ENDING ===== -->
+    <footer class="ending">
+      <span class="flake rv" aria-hidden="true">❄</span>
+      <p class="rv">눈 속에 갇힌 밤,<span class="last">기다리고 있을게요. ❄️</span></p>
+      <p class="sig rv">🎄 머더미스터리 크리스마스 나잇</p>
+      <button type="button" class="share-mini rv" id="shareLink">초대장 링크 복사</button>
+    </footer>
+
+  </article>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- toast ---------- */
+  var toast = document.getElementById('toast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2400);
+  }
+
+  /* ---------- clipboard ---------- */
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch(e){ ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+  function copyText(text, okMsg, failMsg){
+    var done = function(ok){
+      showToast(ok ? okMsg : failMsg);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(fallbackCopy(text)); });
+    } else {
+      done(fallbackCopy(text));
+    }
+  }
+
+  /* ---------- countdown ---------- */
+  var target = new Date('2026-12-12T19:00:00+09:00').getTime();
+  var elD = document.getElementById('cdD'),
+      elH = document.getElementById('cdH'),
+      elM = document.getElementById('cdM'),
+      elS = document.getElementById('cdS'),
+      badge = document.getElementById('cdBadge'),
+      grid = document.getElementById('cdGrid'),
+      doneEl = document.getElementById('cdDone');
+
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+
+  function tick(){
+    var diff = target - Date.now();
+    if (diff <= 0){
+      grid.hidden = true;
+      badge.hidden = true;
+      doneEl.hidden = false;
+      return true;
+    }
+    var s = Math.floor(diff / 1000);
+    var d = Math.floor(s / 86400); s -= d * 86400;
+    var h = Math.floor(s / 3600);  s -= h * 3600;
+    var m = Math.floor(s / 60);    s -= m * 60;
+    elD.textContent = d;
+    elH.textContent = pad(h);
+    elM.textContent = pad(m);
+    elS.textContent = pad(s);
+    elD.parentNode.querySelector('.cd-label').textContent = 'DAYS';
+    badge.textContent = 'D-' + d;
+    return false;
+  }
+  if (!tick()){
+    var timer = setInterval(function(){ if (tick()) clearInterval(timer); }, 1000);
+  }
+
+  /* ---------- address copy ---------- */
+  var addr = '서울 마포구 잔다리로 65, 지하 1층';
+  document.getElementById('copyAddr').addEventListener('click', function(){
+    copyText(addr, '주소를 복사했어요 📋', '복사가 안 됐어요. 주소를 길게 눌러 복사해 주세요.');
+  });
+
+  /* ---------- RSVP ---------- */
+  var nameInput = document.getElementById('nameInput');
+  var preview = document.getElementById('preview');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var scope = '';
+
+  function renderPreview(){
+    var name = nameInput.value.trim();
+    if (!name && !scope){
+      preview.classList.add('is-empty');
+      preview.textContent = '이름 / 참석 범위';
+      return;
+    }
+    preview.classList.remove('is-empty');
+    preview.textContent = (name || '이름') + ' / ' + (scope || '참석 범위');
+  }
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      var val = chip.getAttribute('data-scope');
+      if (scope === val){
+        scope = '';
+        chip.setAttribute('aria-pressed','false');
+      } else {
+        scope = val;
+        chips.forEach(function(c){
+          c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+        });
+      }
+      renderPreview();
+    });
+  });
+
+  nameInput.addEventListener('input', renderPreview);
+  nameInput.addEventListener('keydown', function(e){
+    if (e.key === 'Enter'){ e.preventDefault(); nameInput.blur(); document.getElementById('copyRsvp').click(); }
+  });
+
+  document.getElementById('copyRsvp').addEventListener('click', function(){
+    var name = nameInput.value.trim();
+    if (!name){
+      showToast('이름을 먼저 적어 주세요');
+      nameInput.focus();
+      return;
+    }
+    if (!scope){
+      showToast('참석 범위를 선택해 주세요');
+      return;
+    }
+    copyText(name + ' / ' + scope, '회신 문구를 복사했어요! 카톡에 붙여 넣어 주세요 📋', '복사가 안 됐어요. 아래 문구를 길게 눌러 복사해 주세요.');
+  });
+
+  /* ---------- share link ---------- */
+  document.getElementById('shareLink').addEventListener('click', function(){
+    var url = location.href.split('#')[0];
+    copyText(url, '초대장 링크를 복사했어요 🔗', '링크 복사가 안 됐어요. 주소창의 주소를 복사해 주세요.');
+  });
+
+  /* ---------- reveal on scroll ---------- */
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('.rv'));
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- snow ---------- */
+  var canvas = document.getElementById('snow');
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduced && canvas && canvas.getContext){
+    var ctx = canvas.getContext('2d');
+    var w = 0, h = 0, dpr = 1, flakes = [], raf = null;
+
+    function makeFlake(anywhere){
+      var r = 0.6 + Math.random() * 1.9;
+      return {
+        x: Math.random() * w,
+        y: anywhere ? Math.random() * h : -10 - Math.random() * h * 0.4,
+        r: r,
+        vy: 0.22 + r * 0.28,
+        drift: (Math.random() - 0.5) * 0.5,
+        phase: Math.random() * Math.PI * 2,
+        amp: 0.25 + Math.random() * 0.65,
+        a: 0.22 + Math.random() * 0.5
+      };
+    }
+
+    function resize(){
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var count = Math.max(28, Math.min(110, Math.round(w * h / 14000)));
+      flakes = [];
+      for (var i = 0; i < count; i++) flakes.push(makeFlake(true));
+    }
+
+    function draw(){
+      ctx.clearRect(0, 0, w, h);
+      for (var i = 0; i < flakes.length; i++){
+        var f = flakes[i];
+        ctx.beginPath();
+        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255,255,255,' + f.a + ')';
+        ctx.fill();
+      }
+    }
+
+    function loop(){
+      for (var i = 0; i < flakes.length; i++){
+        var f = flakes[i];
+        f.phase += 0.012;
+        f.y += f.vy;
+        f.x += Math.sin(f.phase) * f.amp * 0.5 + f.drift * 0.18;
+        if (f.y - f.r > h + 4 || f.x < -12 || f.x > w + 12){
+          flakes[i] = makeFlake(false);
+          flakes[i].x = Math.random() * w;
+        }
+      }
+      draw();
+      raf = requestAnimationFrame(loop);
+    }
+
+    resize();
+    draw();
+    loop();
+
+    var rt = null;
+    window.addEventListener('resize', function(){
+      clearTimeout(rt);
+      rt = setTimeout(function(){ cancelAnimationFrame(raf); resize(); draw(); loop(); }, 180);
+    });
+    document.addEventListener('visibilitychange', function(){
+      if (document.hidden){ cancelAnimationFrame(raf); }
+      else { cancelAnimationFrame(raf); loop(); }
+    });
+  }
+})();
+</script>
+</body>
+</html>
